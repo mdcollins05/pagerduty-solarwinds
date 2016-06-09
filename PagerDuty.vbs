@@ -65,6 +65,7 @@ For Each objFile in colFiles
 			Set AlertFileContent = objFSO.OpenTextFile(AlertFile,1)
 			PostBody = AlertFileContent.ReadAll
 			PostBody = Replace(PostBody, "\", "\\")
+			PostBody = Replace(PostBody, "Ôªø", "")
 			AlertFileContent.Close
 
 			If Err.Number <> 0 Then
